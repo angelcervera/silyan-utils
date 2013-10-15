@@ -2,6 +2,7 @@
 <classpath>
 	<classpathentry kind="src" path="java/source"/>
 	<classpathentry kind="src" path="java/conf/commons"/>
+	<classpathentry kind="src" path="java/test"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="con" path="org.apache.ivyde.eclipse.cpcontainer.IVYDE_CONTAINER/?project=silyan-helpers&amp;ivyXmlPath=ivy.xml&amp;confs=*"/>
 	<classpathentry kind="output" path="build/eclipse/bin"/>
