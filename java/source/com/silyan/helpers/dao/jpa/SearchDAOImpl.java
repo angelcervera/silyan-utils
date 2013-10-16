@@ -11,6 +11,7 @@ import java.util.logging.Logger;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 
+import com.silyan.helpers.dao.SearchDAO;
 import com.silyan.helpers.dao.dto.SearchCondition;
 import com.silyan.helpers.dao.dto.SearchConditionValues;
 import com.silyan.helpers.dao.dto.SearchOrder;
@@ -20,11 +21,16 @@ import com.silyan.helpers.dao.dto.SearchWrapper;
  * @author Angel Cervera Claudio (angelcervera@silyan.com)
  *
  */
-public abstract class JpaDAOBase<E> {
+public abstract class SearchDAOImpl<T> implements SearchDAO<T> {
 	
-	protected abstract Class<E> getType();
+	private String LOGNAME = SearchDAOImpl.class.getName();
 	
-	private String LOGNAME = JpaDAOBase.class.getName();
+	protected abstract Class<T> getType();
+	
+	/**
+	 * @return the entityManager
+	 */
+	public abstract EntityManager getEntityManager();
 	
 	/**
 	 * Execute a search.
@@ -32,7 +38,8 @@ public abstract class JpaDAOBase<E> {
 	 * @param searchWrapper Search definition.
 	 * @throws Exception No rollback necessary in search, so exception doesn't mark transaction to roollback.
 	 */
-	protected void search(SearchWrapper<E> searchWrapper) throws Exception {
+	@Override
+	public void search(SearchWrapper<T> searchWrapper) throws Exception {
 		
 		long initmm = System.currentTimeMillis();
 		
@@ -125,7 +132,7 @@ public abstract class JpaDAOBase<E> {
 		setParameters(searchWrapper, q);
 		
 		// Ejecutamos la consulta.
-		searchWrapper.setResult((List<E>)q.getResultList());
+		searchWrapper.setResult((List<T>)q.getResultList());
 		
 		if(searchWrapper.getObtainResultSize()) {
 			
@@ -170,7 +177,7 @@ public abstract class JpaDAOBase<E> {
 	 * @param searchWrapper
 	 * @return
 	 */
-	protected String createQueryFilter(SearchWrapper<E> searchWrapper) {
+	protected String createQueryFilter(SearchWrapper<T> searchWrapper) {
 		StringBuffer filter = new StringBuffer();		
 		
 		for (Map.Entry<String, SearchConditionValues> entry : searchWrapper.getSearchValues().entrySet()) {
@@ -201,7 +208,7 @@ public abstract class JpaDAOBase<E> {
 	 * @param q
 	 * @throws HibernateException
 	 */
-	private void setParameters(SearchWrapper<E> searchWrapper, Query q) {
+	private void setParameters(SearchWrapper<T> searchWrapper, Query q) {
 		for (Map.Entry<String, SearchConditionValues> entry : searchWrapper.getSearchValues().entrySet()) {
 			SearchConditionValues searchConditionValues = entry.getValue();
 			Map<String, Object> mapValues = searchConditionValues.getConditionsMap();
@@ -231,9 +238,4 @@ public abstract class JpaDAOBase<E> {
 		return retValue;
 	}
 
-	/**
-	 * @return the entityManager
-	 */
-	public abstract EntityManager getEntityManager();
-	
 }
