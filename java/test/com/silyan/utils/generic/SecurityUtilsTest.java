@@ -1,10 +1,12 @@
-package com.silyan.helpers.generic;
+package com.silyan.utils.generic;
 
 import java.security.NoSuchAlgorithmException;
 
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+
+import com.silyan.utils.generic.SecurityUtils;
 
 public class SecurityUtilsTest {
 

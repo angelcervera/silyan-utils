@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.silyan.helpers.media;
+package com.silyan.utils.media;
 
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;

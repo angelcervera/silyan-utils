@@ -1,11 +1,11 @@
 /**
  * 
  */
-package com.silyan.helpers.dao;
+package com.silyan.utils.dao;
 
 import java.util.Collection;
 
-import com.silyan.helpers.dao.dto.SearchOrder;
+import com.silyan.utils.dao.dto.SearchOrder;
 
 /**
  * @author angel

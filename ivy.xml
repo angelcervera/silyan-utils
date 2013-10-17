@@ -1,5 +1,5 @@
 <ivy-module version="2.0">
-    <info organisation="com.elocalia" module="model"/>
+    <info organisation="com.silyan" module="utils"/>
     <dependencies>
 		<dependency org="org.testng" name="testng" rev="6.8.5"/>
 		<dependency org="javax" name="javaee-api" rev="7.0"/>

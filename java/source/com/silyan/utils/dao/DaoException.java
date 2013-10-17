@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.silyan.helpers.dao;
+package com.silyan.utils.dao;
 
 import javax.ejb.ApplicationException;
 

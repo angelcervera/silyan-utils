@@ -1,4 +1,4 @@
-package com.silyan.helpers.generic;
+package com.silyan.utils.generic;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -6,6 +6,8 @@ import java.text.SimpleDateFormat;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+
+import com.silyan.utils.generic.DateUtils;
 
 public class DateUtilsTest {
 	

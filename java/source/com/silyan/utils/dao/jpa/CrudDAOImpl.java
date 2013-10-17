@@ -1,15 +1,15 @@
 /**
  * 
  */
-package com.silyan.helpers.dao.jpa;
+package com.silyan.utils.dao.jpa;
 
 import java.util.Collection;
 import java.util.List;
 
-import com.silyan.helpers.dao.CrudDAO;
-import com.silyan.helpers.dao.DaoException;
-import com.silyan.helpers.dao.dto.SearchOrder;
-import com.silyan.helpers.dao.dto.SearchWrapper;
+import com.silyan.utils.dao.CrudDAO;
+import com.silyan.utils.dao.DaoException;
+import com.silyan.utils.dao.dto.SearchOrder;
+import com.silyan.utils.dao.dto.SearchWrapper;
 
 /**
  * @author angel

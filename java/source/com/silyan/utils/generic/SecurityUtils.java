@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.silyan.helpers.generic;
+package com.silyan.utils.generic;
 
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;

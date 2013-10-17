@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.silyan.helpers.dao.dto;
+package com.silyan.utils.dao.dto;
 
 import java.io.Serializable;
 

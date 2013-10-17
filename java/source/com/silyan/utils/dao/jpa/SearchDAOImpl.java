@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.silyan.helpers.dao.jpa;
+package com.silyan.utils.dao.jpa;
 
 import java.util.List;
 import java.util.Map;
@@ -11,11 +11,11 @@ import java.util.logging.Logger;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 
-import com.silyan.helpers.dao.SearchDAO;
-import com.silyan.helpers.dao.dto.SearchCondition;
-import com.silyan.helpers.dao.dto.SearchConditionValues;
-import com.silyan.helpers.dao.dto.SearchOrder;
-import com.silyan.helpers.dao.dto.SearchWrapper;
+import com.silyan.utils.dao.SearchDAO;
+import com.silyan.utils.dao.dto.SearchCondition;
+import com.silyan.utils.dao.dto.SearchConditionValues;
+import com.silyan.utils.dao.dto.SearchOrder;
+import com.silyan.utils.dao.dto.SearchWrapper;
 
 /**
  * @author Angel Cervera Claudio (angelcervera@silyan.com)

@@ -1,9 +1,9 @@
 /**
  * 
  */
-package com.silyan.helpers.dao;
+package com.silyan.utils.dao;
 
-import com.silyan.helpers.dao.dto.SearchWrapper;
+import com.silyan.utils.dao.dto.SearchWrapper;
 
 /**
  * @author angelcervera@silyan.com

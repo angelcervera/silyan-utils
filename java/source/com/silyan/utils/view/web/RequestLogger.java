@@ -3,7 +3,7 @@
  * and open the template in the editor.
  */
 
-package com.silyan.helpers.view.web;
+package com.silyan.utils.view.web;
 
 import java.io.IOException;
 import java.text.DateFormat;
