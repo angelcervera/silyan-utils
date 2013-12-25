@@ -181,7 +181,7 @@ public abstract class SearchDAOImpl<T> implements SearchDAO<T> {
 			searchWrapper.setResultSize( new Integer(((Long) qcount.getSingleResult()).intValue()));
 			
 			// Repositioning in last pages, if selected pages is greater than last page.
-			if( !searchWrapper.getResultSize().equals(0) && searchWrapper.getPage() >= searchWrapper.getPagesCount() ) {
+			if( !searchWrapper.getResultSize().equals(0) && searchWrapper.getPage() != null && searchWrapper.getPage() >= searchWrapper.getPagesCount() ) {
 				searchWrapper.setPage( searchWrapper.getPagesCount() -1);
 				search(searchWrapper);
 			}
