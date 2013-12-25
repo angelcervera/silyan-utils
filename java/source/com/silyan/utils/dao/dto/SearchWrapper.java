@@ -169,6 +169,11 @@ public class SearchWrapper<E> implements Serializable {
 		this.orderBy = orderBy;
 	}
 
+	/**
+	 * Number of pages.
+	 * 
+	 * @return
+	 */
 	public int getPagesCount() {
 		double count = (double)resultSize / (double)pageSize;
 		double pageCount = Math.floor(count);

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!--
    Licensed to the Apache Software Foundation (ASF) under one
    or more contributor license agreements.  See the NOTICE file
@@ -18,15 +18,15 @@
    under the License.    
 -->
 <ivy-module version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://ant.apache.org/ivy/schemas/ivy.xsd">
-    <info organisation="com.silyan" module="silyan-utils" revision="${project.version}" status="${project.status}" />
+    <info organisation="com.silyan" module="silyan-utils" revision="2.1" status="integration" publication="20131225192318"/>
     <configurations>
 		<conf name="default" description="Default configuration"/>
 		<conf name="compile" extends="default" description="Compilation configuration"/>
 		<conf name="test" extends="default" description="For testing"/>
     </configurations>
     <publications defaultconf="default">
-    	<artifact name="silyan-utils" type="jar" ext="jar" conf="default" />
-    	<artifact name="silyan-utils-source" type="source" ext="jar" />
+    	<artifact name="silyan-utils" type="jar" ext="jar" conf="default"/>
+    	<artifact name="silyan-utils-source" type="source" ext="jar"/>
     </publications>
     <dependencies defaultconfmapping="*->default,sources">
 		<dependency org="org.testng" name="testng" rev="6.8.5" conf="test->default"/>
